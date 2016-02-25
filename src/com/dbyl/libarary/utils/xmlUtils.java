@@ -16,6 +16,12 @@ import org.dom4j.io.XMLWriter;
 
 import com.dbyl.libarary.utils.Locator.ByType;
 
+
+/**
+ * 可以直接使用的类
+ * @author 700sfriend
+ *
+ */
 public class xmlUtils {
 
 	/**
@@ -125,6 +131,13 @@ public class xmlUtils {
 		page.addElement("locator").addAttribute("type", "ById")
 				.addAttribute("timeOut", "3")
 				.addAttribute("value", "\\\\div[@id]").addText("InputButton");
+		
+		
+		page.addElement("locator").addAttribute("type", "ByXpath")
+		.addAttribute("timeOut", "3")
+		.addAttribute("value", ".//*[@id=':1']").addText("myMainPage");
+		
+		
 		writer.write(document);
 		writer.close();
 	}

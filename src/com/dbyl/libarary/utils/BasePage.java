@@ -181,7 +181,8 @@ public class BasePage {
 			throw notFindAlert;
 		}
 	}
-
+	
+//	鼠标悬停在当前位置，既不点击并且不释放
 	protected void clickAndHold(Locator locator) throws IOException {
 		WebElement e = findElement(driver, locator);
 		Actions actions = new Actions(driver);
@@ -269,10 +270,14 @@ public class BasePage {
 		final Locator locator = getLocator(myLocator.getElement());
 		boolean isPresent = false;
 		WebDriverWait wait = new WebDriverWait(driver, 60);
+		
+		
+//		判断是否找到当前页面
+//		http://my.oschina.net/u/928852/blog/98885?fromerr=kDYHyP3N
 		isPresent = wait.until(new ExpectedCondition<WebElement>() {
 			@Override
-			public WebElement apply(WebDriver d) {
-				return findElement(d, locator);
+			public WebElement apply(WebDriver newdriver) {
+				return findElement(newdriver, locator);
 			}
 		}).isDisplayed();
 		return isPresent;
@@ -280,7 +285,7 @@ public class BasePage {
 
 	/**
 	 * This Method for check isPresent Locator
-	 * 
+	 * 判断当前页面是否为true
 	 * @param locator
 	 * @param timeOut
 	 * @return

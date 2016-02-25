@@ -34,8 +34,8 @@ public class CommonLogin {
 		loginPage.typeEmailInputBox(email);
 		loginPage.typePasswordInputBox(password);
 		loginPage.clickOnLoginButton();
+		//判断当前页面是否为true
 		Assert.assertTrue(loginPage.isPrestentProfile(), "login failed");
-
 		return (HomePage) PageFactory.getPage(HomePage.class, getDriver());
 	}
 /**

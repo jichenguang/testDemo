@@ -27,7 +27,7 @@ public class HomePage extends BasePage {
 	
 	/**
 	 * @author 700sfriend
-	 * 定位元素
+	 * 鼠标悬停在头像图片上，既不点击并且不释放
 	 * @throws Exception
 	 */
 	
@@ -39,12 +39,15 @@ public class HomePage extends BasePage {
 	/**
 	 * @author 700sfriend
 	 * 登陆后的操作
-	 * 内涵两个方法
+	 * 内含两个方法
+	 * 鼠标操作
+	 * http://www.ibm.com/developerworks/cn/java/j-lo-keyboard/
 	 * @throws Exception
 	 */
 	public void clickOnMainPage() throws Exception
 	{
 		clickAndHoldProfile();
 		click(myMainPage);
+		log.info("跳转到我的主页");
 	}
 }

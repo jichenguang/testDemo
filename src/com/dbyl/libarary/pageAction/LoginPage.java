@@ -65,7 +65,6 @@ public class LoginPage extends BasePage {
 
 	public boolean isPrestentProfile() throws IOException {
 		return isElementPresent(profile, 20);
-
 	}
 
 	public void waitForPageLoad() {
