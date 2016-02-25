@@ -42,7 +42,11 @@ public class DriverFactory {
 		log.info("Create HtmlUnitDrive ");
 		return driver;
 	}
-
+	
+	/**
+	 * 获取Chrome作为参数的driver
+	 * @return
+	 */
 	public static WebDriver getChromeDriver() {
 
 		try {
