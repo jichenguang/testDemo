@@ -17,7 +17,8 @@ public class LoginPage extends BasePage {
 	}
 /**
  * @author 700sfriend
- * 封装了driver.get的方法，打开知乎的登陆页
+ * 1、封装了driver.get的方法，打开知乎的登陆页
+ * 2、封装了4个locator对象
  * @param driver
  * @throws Exception
  */
@@ -27,11 +28,9 @@ public class LoginPage extends BasePage {
 	}
 
 	Locator loginEmailInputBox = new Locator("loginEmailInputBox",30);
-
 	Locator loginPasswordInputBox = new Locator("loginPasswordInputBox");
 	Locator loginButton = new Locator("loginButton");
-	Locator profile = new Locator(
-			"profile");
+	Locator profile = new Locator("profile");
 /**
  * @author 700sfriend
  * 输入用户名、密码、点击注册按钮
@@ -39,8 +38,10 @@ public class LoginPage extends BasePage {
  * @throws Exception
  */
 	public void typeEmailInputBox(String email) throws Exception {
-//		open("http://www.zhihu.com");
+		open("http://www.zhihu.com");
+//		点击“登录”切换按钮，到登录页面
 		switchToLogin();
+//		输入值
 		type(loginEmailInputBox, email);
 	}
 	/**

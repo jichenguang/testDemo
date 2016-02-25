@@ -17,6 +17,16 @@ public class CommonLogin {
 
 	static LoginPage loginPage;
 
+	/**
+	 * @author 700sfriend
+	 * 正常的登录操作
+	 * 
+	 * 封装了普通的脚本方法，很赞！
+	 * @param email
+	 * @param password
+	 * @return
+	 * @throws Exception
+	 */
 	public static HomePage login(String email, String password)
 			throws Exception {
 		loginPage = new LoginPage(driver);

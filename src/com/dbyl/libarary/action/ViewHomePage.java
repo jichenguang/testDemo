@@ -22,14 +22,18 @@ public class ViewHomePage {
 
 	/**
 	 * @author 700sfriend
-	 * 登陆后跳转到homepage
+	 * 1、切换到登录
+	 * 2、登录
+	 * 3、切换到我的主页
 	 * @return
 	 * @throws Exception
 	 */
 	public static HomePage viewMyProfile() throws Exception {
 
 		CommonLogin.setDriver(driver);
+//		正常的登录
 		homePage = CommonLogin.login();
+//		登录后切换到“我的主页”
 		homePage.clickOnMainPage();
 		return homePage;
 	}

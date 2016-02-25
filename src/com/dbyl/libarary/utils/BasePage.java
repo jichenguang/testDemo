@@ -61,6 +61,13 @@ public class BasePage {
 				.getCanonicalName());
 	}
 
+	/**
+	 * @author 700sfriend
+	 * 发送输入值
+	 * @param locator
+	 * @param values
+	 * @throws Exception
+	 */
 	protected void type(Locator locator, String values) throws Exception {
 		WebElement e = findElement(driver, locator);
 		log.info("type value is:  " + values);
@@ -124,7 +131,7 @@ public class BasePage {
 
 	/**
 	 * @author 700sfriend 重新封装的click方法
-	 * @param  locator： 一个已知的元素的DOM位置
+	 * @param  locator：一个对象。 一个已知的元素的DOM位置
 	 * @param  driver:  一个已知的driver,  是从最外层调用的方法传进来的。 
 	 * 结果：定位元素并“点击”
 	 * @throws Exception
@@ -195,56 +202,64 @@ public class BasePage {
 
 	/**
 	 * get by parameter
-	 * 
+	 * 返回一个WebElement对象
 	 * @author Young
 	 * @param driver
 	 * @param locator
 	 * @return
 	 * @throws IOException
 	 */
-//	--Locator locator其实是传入的一个元素名称，根据这个名称将给出元素路径
+//	--Locator locator其实是传入的一个locator对象，根据这个对象的element属性,即名称，将给出元素路径
 	public WebElement getElement(WebDriver driver, Locator locator)
 			throws IOException {
-		locator = getLocator(locator.getElement());
+		
+//		--locator.getElement() 获取元素的名称，即locatorname
+//		--getLocator()  将返回一个新的locator对象，这个对象是从locatormap中获取，获取依赖locatorname
+		Locator newlocator;
+		newlocator= getLocator(locator.getElement());
+		log.debug("！元素名称是："+locator.getElement());
+		log.debug("! 元素的路径是："+newlocator.getElement());
 		WebElement e;
-		switch (locator.getBy()) {
+//		获取locator对象的元素类型，即xpath
+		switch (newlocator.getBy()) {
 		case xpath:
 			log.debug("find element By xpath");
 //			--locator.getElement()
 //			似乎是返回了一个字符串
-//			该字符串是常规的元素路径		
-			e = driver.findElement(By.xpath(locator.getElement()));
+//			该字符串是常规的元素名称	
+			e = driver.findElement(By.xpath(newlocator.getElement()));
 			break;
 		case id:
 			log.debug("find element By id");
-			e = driver.findElement(By.id(locator.getElement()));
+//			--这个locator.getElement将返回一个String,即元素路径
+			e = driver.findElement(By.id(newlocator.getElement()));
 			break;
 		case name:
 			log.debug("find element By name");
-			e = driver.findElement(By.name(locator.getElement()));
+			e = driver.findElement(By.name(newlocator.getElement()));
 			break;
 		case cssSelector:
 			log.debug("find element By cssSelector");
-			e = driver.findElement(By.cssSelector(locator.getElement()));
+			e = driver.findElement(By.cssSelector(newlocator.getElement()));
 			break;
 		case className:
 			log.debug("find element By className");
-			e = driver.findElement(By.className(locator.getElement()));
+			e = driver.findElement(By.className(newlocator.getElement()));
 			break;
 		case tagName:
 			log.debug("find element By tagName");
-			e = driver.findElement(By.tagName(locator.getElement()));
+			e = driver.findElement(By.tagName(newlocator.getElement()));
 			break;
 		case linkText:
 			log.debug("find element By linkText");
-			e = driver.findElement(By.linkText(locator.getElement()));
+			e = driver.findElement(By.linkText(newlocator.getElement()));
 			break;
 		case partialLinkText:
 			log.debug("find element By partialLinkText");
-			e = driver.findElement(By.partialLinkText(locator.getElement()));
+			e = driver.findElement(By.partialLinkText(newlocator.getElement()));
 			break;
 		default:
-			e = driver.findElement(By.id(locator.getElement()));
+			e = driver.findElement(By.id(newlocator.getElement()));
 		}
 		return e;
 	}
@@ -277,7 +292,9 @@ public class BasePage {
 	}
 
 	/**
-	 * 
+	 * @author 700sfriend
+	 * 返回一个对象WebElement对象
+	 * @param 一个对象
 	 * @param driver
 	 * @param locator
 	 * @return
@@ -306,6 +323,7 @@ public class BasePage {
 
 	/**
 	 * @author Young
+	 * 返回一个locator对象,此时的locator对象是新的，包含了element=元素路径信息
 	 * 1、传入一个参数，该参数描述了 元素定位信息的名称
 	 * 2、根据这个名称，从外部文件获取对应的路径，返回给调用者
 	 * @param locatorName

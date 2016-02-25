@@ -30,7 +30,7 @@ public class loginTest extends UITest {
 	}
 
 	@Test(groups = "loginTest")
-	public void loginByUerName() throws Exception {
+	public void loginByUserName() throws Exception {
 		ViewHomePage.viewMyProfile();
 	}
 
