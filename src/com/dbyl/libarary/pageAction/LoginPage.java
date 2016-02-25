@@ -15,7 +15,12 @@ public class LoginPage extends BasePage {
 	public WebDriver getDriver() {
 		return driver;
 	}
-
+/**
+ * @author 700sfriend
+ * 封装了driver.get的方法，打开知乎的登陆页
+ * @param driver
+ * @throws Exception
+ */
 	public LoginPage(WebDriver driver) throws Exception {
 		super(driver);
 		driver.get("http://www.zhihu.com/#signin");
@@ -27,17 +32,32 @@ public class LoginPage extends BasePage {
 	Locator loginButton = new Locator("loginButton");
 	Locator profile = new Locator(
 			"profile");
-
+/**
+ * @author 700sfriend
+ * 输入用户名、密码、点击注册按钮
+ * @param email
+ * @throws Exception
+ */
 	public void typeEmailInputBox(String email) throws Exception {
-		open("http://www.zhihu.com");
+//		open("http://www.zhihu.com");
 		switchToLogin();
 		type(loginEmailInputBox, email);
 	}
-
+	/**
+	 * @author 700sfriend
+	 * 输入用户名、密码、点击注册按钮
+	 * @param email
+	 * @throws Exception
+	 */
 	public void typePasswordInputBox(String password) throws Exception {
 		type(loginPasswordInputBox, password);
 	}
-
+	/**
+	 * @author 700sfriend
+	 * 输入用户名、密码、点击注册按钮
+	 * @param email
+	 * @throws Exception
+	 */
 	public void clickOnLoginButton() throws Exception {
 		click(loginButton);
 	}
@@ -52,8 +72,14 @@ public class LoginPage extends BasePage {
 				.pageLoadTimeout(30, TimeUnit.SECONDS);
 	}
 
+	/**
+	 * @author 700sfriend
+	 *  跳转到登陆页
+	 * @throws Exception
+	 */
 	public void switchToLogin() throws Exception
-	{
+	{	
+//		 返回一个Locator 对象, 该对象具有3个属性。
 		Locator clickToLoginButton=new Locator("clickToLoginButton");
 		click(clickToLoginButton);
 	}

@@ -24,7 +24,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 /***
  * 
  * @author Young
- *
+ * @author 700sfriend
+ *  工厂类。专门加工调用浏览器类型
  */
 public class DriverFactory {
 
@@ -33,8 +34,12 @@ public class DriverFactory {
 	private static Properties p = null;
 	private static String IEDriverServer;
 	private static String EDGEDriver;
+	
+//	浏览器的路径都写在文本中，由config获取。
+//	MAC环境中需要把\\转换成/
 	private static String config = System.getProperty("user.dir")
-			+ "\\config.properties";
+			+ "/config.properties";
+	
 	static Log log = new Log(DriverFactory.class);
 
 	public static WebDriver getHtmlUnit() {
@@ -44,7 +49,10 @@ public class DriverFactory {
 	}
 	
 	/**
-	 * 获取Chrome作为参数的driver
+	 * 从文本获取Chrome作为参数的driver
+	 * 指定Chrome路径
+	 * 设置启动参数
+	 * 设置driver
 	 * @return
 	 */
 	public static WebDriver getChromeDriver() {
@@ -71,6 +79,12 @@ public class DriverFactory {
 		// // TODO Auto-generated catch block
 		// e.printStackTrace();
 		// }
+//		http://www.vingo.cn/vingo/archives/1172
+		/**
+		 * @author 700sfriend
+		 * webdriver在打开chrome、firefox浏览器时，默认是创建新用户，每次打开都是一个全新的浏览器。
+		 * 对于浏览器需要使用npapi插件，会有困扰。通过加载个人配置文件的方式，在第一次打开浏览器时，手动设置npapi插件是否加载，后续运行直接使用之前的配置信息，不会反复提示。
+		 */
 		ChromeOptions options = new ChromeOptions();
 		// options.addExtensions(new File(""));
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();

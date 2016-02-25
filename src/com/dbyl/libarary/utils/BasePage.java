@@ -22,6 +22,12 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * @author 700sfriend
+ *  外部传入driver,本类直接调用
+ * @author 700sfriend
+ *
+ */
 public class BasePage {
 
 	protected WebDriver driver;
@@ -30,6 +36,14 @@ public class BasePage {
 	String path;
 	protected Log log = new Log(this.getClass());
 
+	
+	/**
+	 * @author 700sfriend
+	 * @param 外部获取元素信息文件
+	 * path为拼写的文件路径
+	 * @param driver
+	 * @throws Exception
+	 */
 	protected BasePage(WebDriver driver) throws Exception {
 		this.driver = driver;
 		log.debug(this.getClass().getCanonicalName());
@@ -39,6 +53,10 @@ public class BasePage {
 				+ "/src/com/dbyl/libarary/pageAction/"
 				+ this.getClass().getSimpleName() + ".xml";
 		log.info(path);
+		/**
+		 * @author 700sfriend
+		 *  从外部文件获取元素的定位位置
+		 */
 		locatorMap = xmlUtils.readXMLDocument(path, this.getClass()
 				.getCanonicalName());
 	}
@@ -104,6 +122,13 @@ public class BasePage {
 		js.executeScript("arguments[0].scrollIntoViewIfNeeded(true);", e);
 	}
 
+	/**
+	 * @author 700sfriend 重新封装的click方法
+	 * @param  locator： 一个已知的元素的DOM位置
+	 * @param  driver:  一个已知的driver,  是从最外层调用的方法传进来的。 
+	 * 结果：定位元素并“点击”
+	 * @throws Exception
+	 */
 	protected void click(Locator locator) throws Exception {
 		WebElement e = findElement(driver, locator);
 		log.info("click button");
@@ -177,6 +202,7 @@ public class BasePage {
 	 * @return
 	 * @throws IOException
 	 */
+//	--Locator locator其实是传入的一个元素名称，根据这个名称将给出元素路径
 	public WebElement getElement(WebDriver driver, Locator locator)
 			throws IOException {
 		locator = getLocator(locator.getElement());
@@ -184,6 +210,9 @@ public class BasePage {
 		switch (locator.getBy()) {
 		case xpath:
 			log.debug("find element By xpath");
+//			--locator.getElement()
+//			似乎是返回了一个字符串
+//			该字符串是常规的元素路径		
 			e = driver.findElement(By.xpath(locator.getElement()));
 			break;
 		case id:
@@ -277,7 +306,8 @@ public class BasePage {
 
 	/**
 	 * @author Young
-	 * 
+	 * 1、传入一个参数，该参数描述了 元素定位信息的名称
+	 * 2、根据这个名称，从外部文件获取对应的路径，返回给调用者
 	 * @param locatorName
 	 * @return
 	 * @throws IOException
@@ -298,7 +328,13 @@ public class BasePage {
 		return locator;
 
 	}
-	
+
+/**
+ * @author 700sfriend
+ *  检查知乎首页是否已打开
+ * @param URL
+ * @return
+ */
 	public int open(String URL)
 	{
 		if(URL==null ||URL.equals(""))

@@ -34,6 +34,11 @@ public class UITest {
 		this.driver = driver;
 	}
 
+	/**
+	 * @author 700sfriend
+	 *  初始化一个driver;
+	 * @param driver
+	 */
 	public void init(WebDriver driver) {
 		log.info("Start WebDriver");
 		setDriver(driver);

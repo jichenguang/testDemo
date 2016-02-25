@@ -14,17 +14,34 @@ public class HomePage extends BasePage {
 	public HomePage(WebDriver driver) throws Exception {
 		super(driver);
 	}
-
+	
+	/**
+	 * @author 700sfriend
+	 * 定位元素
+	 * @throws Exception
+	 */
 	public void clickOnMyProfile() throws Exception
 	{
 		click(profile);
 	}
+	
+	/**
+	 * @author 700sfriend
+	 * 定位元素
+	 * @throws Exception
+	 */
 	
 	public void clickAndHoldProfile() throws IOException
 	{
 		clickAndHold(profile);
 	}
 	
+	/**
+	 * @author 700sfriend
+	 * 登陆后的操作
+	 * 内涵两个方法
+	 * @throws Exception
+	 */
 	public void clickOnMainPage() throws Exception
 	{
 		clickAndHoldProfile();

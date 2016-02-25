@@ -20,6 +20,12 @@ public class ViewHomePage {
 		return driver;
 	}
 
+	/**
+	 * @author 700sfriend
+	 * 登陆后跳转到homepage
+	 * @return
+	 * @throws Exception
+	 */
 	public static HomePage viewMyProfile() throws Exception {
 
 		CommonLogin.setDriver(driver);
@@ -28,6 +34,11 @@ public class ViewHomePage {
 		return homePage;
 	}
 
+	/**
+	 * @author 700sfriend
+	 * 传一个参数，作为指定的浏览器启动
+	 * @param driver
+	 */
 	public static void setDriver(WebDriver driver) {
 		ViewHomePage.driver = driver;
 	}

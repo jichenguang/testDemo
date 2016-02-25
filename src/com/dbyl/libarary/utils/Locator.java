@@ -2,7 +2,8 @@ package com.dbyl.libarary.utils;
 
 /**
  * This is for element library
- * 
+ * Locator类包含：元素的定位信息或者名称，元素位置信息的类型
+ * Locator大概是一个String类型
  * @author Young
  *
  */
@@ -13,7 +14,7 @@ public class Locator {
 
 	/**
 	 * create a enum variable for By
-	 * 
+	 * @author 700sfriend ！！！！调用什么值，就返回什么值
 	 * @author Young
 	 *
 	 */
@@ -29,7 +30,9 @@ public class Locator {
 
 	/**
 	 * defaut Locator ,use Xpath
-	 * 
+	 * 1、接受传入的参数，该参数用来描述元素的位置或者名称
+	 * 2、返回一个byType对象，该对象为ByType类型的字符串，值为参数传进来时的xpath路径
+	 * 3、设置了element为元素路径或者名称
 	 * @author Young
 	 * @param element
 	 */
@@ -51,6 +54,12 @@ public class Locator {
 		this.byType = byType;
 	}
 
+	/**
+	 * @author 700sfriend
+	 * 1、返回一个String
+	 * 2、该String是常规的元素定位路径
+	 * @return
+	 */
 	public String getElement() {
 		return element;
 	}
@@ -59,6 +68,11 @@ public class Locator {
 		return waitSec;
 	}
 
+	/**
+	 * @author 700sfriend
+	 * 明确元素定位信息的类型
+	 * @return
+	 */
 	public ByType getBy() {
 		return byType;
 	}

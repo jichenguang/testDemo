@@ -19,6 +19,8 @@ import com.dbyl.libarary.utils.Locator.ByType;
 public class xmlUtils {
 
 	/**
+	 * @author 700sfriend
+	 * 读取一个外部文件
 	 * @author Young
 	 * @param path
 	 * @param pageName
