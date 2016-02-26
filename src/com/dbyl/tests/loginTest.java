@@ -1,6 +1,7 @@
 package com.dbyl.tests;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -21,6 +22,7 @@ public class loginTest extends UITest {
 //	注释掉，使用默认浏览器。
 //	WebDriver driver = DriverFactory.getChromeDriver();
 	WebDriver driver = new FirefoxDriver();
+//	WebDriver driver = new ChromeDriver();
 
 	@BeforeMethod(alwaysRun = true)
 	public void init() {

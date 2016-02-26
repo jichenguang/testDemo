@@ -133,13 +133,15 @@ public class BasePage {
 	 * @author 700sfriend 重新封装的click方法
 	 * @param  locator：一个对象。 一个已知的元素的DOM位置
 	 * @param  driver:  一个已知的driver,  是从最外层调用的方法传进来的。 
+	 * ！！！使用JS技术点击，弹出层的元素
 	 * 结果：定位元素并“点击”
 	 * @throws Exception
 	 */
 	protected void click(Locator locator) throws Exception {
 		WebElement e = findElement(driver, locator);
 		log.info("click button");
-		e.click();
+//		e.click();
+		 ((JavascriptExecutor)driver).executeScript("arguments[0].click();",e);
 	}
 
 	protected void select(Locator locator, String value) throws Exception {
