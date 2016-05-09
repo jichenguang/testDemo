@@ -8,7 +8,12 @@ import org.openqa.selenium.WebDriver;
 import com.dbyl.libarary.utils.BasePage;
 import com.dbyl.libarary.utils.Locator;
 
-
+/**
+ * HomePage到底是个啥东西？
+ * 1、是否是包含了页面的元素的一个类？
+ * @author 700sfriend
+ *
+ */
 public class HomePage extends BasePage {
 	private Locator profile=new Locator("//div[@class='top-nav-profile']");
 	private Locator myMainPage= new Locator("myMainPage");

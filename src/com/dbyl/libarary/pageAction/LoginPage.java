@@ -8,6 +8,11 @@ import org.openqa.selenium.WebDriver;
 import com.dbyl.libarary.utils.BasePage;
 import com.dbyl.libarary.utils.Locator;
 
+/**
+ * 一个对象类。
+ * @author 700sfriend
+ *
+ */
 public class LoginPage extends BasePage {
 
 	WebDriver driver;

@@ -7,6 +7,12 @@ import com.dbyl.libarary.pageAction.HomePage;
 import com.dbyl.libarary.pageAction.LoginPage;
 import com.dbyl.libarary.utils.PageFactory;
 
+
+/**
+ * 这是个什么类？
+ * @author 700sfriend
+ *
+ */
 public class CommonLogin {
 
 	private static WebDriver driver;
@@ -19,9 +25,10 @@ public class CommonLogin {
 
 	/**
 	 * @author 700sfriend
+	 * 这是一个有参数的方法
 	 * 正常的登录操作
+	 * 这个方法，封装的是：详细处理了登陆的操作！
 	 * 
-	 * 封装了普通的脚本方法，很赞！
 	 * @param email
 	 * @param password
 	 * @return
@@ -40,12 +47,13 @@ public class CommonLogin {
 	}
 /**
  * @author 700sfriend
+ * 这里是个无参的方法
  * 返回一个HomePage类型
  * @return
  * @throws Exception
  */
 	public static HomePage login() throws Exception {
-//		在本类调用本类方法，可以专注于传参数
+//		在本类调用本类方法，可以专注于接收参数
 		return CommonLogin.login("13282774643", "appium123");
 	}
 /**
