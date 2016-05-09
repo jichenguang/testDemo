@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.os.WindowsUtils;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -26,7 +27,8 @@ public class UseCookieLogin {
 
 	@BeforeClass(alwaysRun = true)
 	public void beforeRun() {
-		driver = DriverFactory.getChromeDriver();
+//		driver = DriverFactory.getChromeDriver();
+		driver = new FirefoxDriver();
 	}
 
 	@Test(alwaysRun = true, groups = "useCookies")
@@ -36,7 +38,8 @@ public class UseCookieLogin {
 		//WindowsUtils.tryToKillByName("chrome.exe");
 		WindowsUtils.getProgramFilesPath();
 
-		driver.get("http://www.zhihu.com/");
+//		driver.get("http://www.zhihu.com/");
+		driver.get("http://www.700store.com/login?");
 		try {
 			File file = new File("broswer.data");
 			FileReader fr = new FileReader(file);

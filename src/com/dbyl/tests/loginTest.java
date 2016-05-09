@@ -25,8 +25,7 @@ public class loginTest extends UITest {
 //	WebDriver driver = new ChromeDriver();
 
 	@BeforeMethod(alwaysRun = true)
-	public void init() {
-		
+	public void init() {		
 		super.init(driver);
 		ViewHomePage.setDriver(driver);
 	}

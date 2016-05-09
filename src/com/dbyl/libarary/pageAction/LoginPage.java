@@ -24,7 +24,7 @@ public class LoginPage extends BasePage {
  */
 	public LoginPage(WebDriver driver) throws Exception {
 		super(driver);
-		driver.get("http://www.zhihu.com/#signin");
+		driver.get("http://www.700store.com/login?");
 	}
 
 	Locator loginEmailInputBox = new Locator("loginEmailInputBox",30);
@@ -38,7 +38,7 @@ public class LoginPage extends BasePage {
  * @throws Exception
  */
 	public void typeEmailInputBox(String email) throws Exception {
-		open("http://www.zhihu.com");
+		open("http://www.700store.com/login?");
 //		点击“登录”切换按钮，到登录页面
 		switchToLogin();
 //		输入值
