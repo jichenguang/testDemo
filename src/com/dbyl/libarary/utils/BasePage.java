@@ -219,13 +219,18 @@ public class BasePage {
 //	--Locator locator其实是传入的一个locator对象，根据这个对象的element属性,即名称，将给出元素路径
 	public WebElement getElement(WebDriver driver, Locator locator)
 			throws IOException {
-		
+//		第一件事
 //		locator.getElement() 获取元素的名称，即locatorname
 //		getLocator()  将返回一个新的locator对象，这个对象是从locatormap中获取，获取依赖locatorname
-		Locator newlocator;
-		newlocator= getLocator(locator.getElement());
-		log.debug("！元素名称是："+locator.getElement());
+		
+		String locatorname =locator.getElement();
+		Locator newlocator = getLocator(locatorname);
+		
+		log.debug("！元素名称是："+locatorname);
 		log.debug("! 元素的路径是："+newlocator.getElement());
+		
+		
+//		第二件事
 		WebElement e;
 //		获取locator对象的元素类型，即xpath
 		switch (newlocator.getBy()) {

@@ -47,6 +47,9 @@ public class LoginPage extends BasePage {
 //		点击“登录”切换按钮，到登录页面
 		switchToLogin();
 //		输入值
+		/*
+		 * Param:locatorname:loginEmailInputBox
+		 */
 		type(loginEmailInputBox, name);
 	}
 	/**
