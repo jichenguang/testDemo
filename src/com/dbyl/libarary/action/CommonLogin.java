@@ -34,11 +34,11 @@ public class CommonLogin {
 	 * @return
 	 * @throws Exception
 	 */
-	public static HomePage login(String email, String password)
+	public static HomePage login(String name, String password)
 			throws Exception {
 		loginPage = new LoginPage(driver);
 		loginPage.waitForPageLoad();
-		loginPage.typeEmailInputBox(email);
+		loginPage.typeEmailInputBox(name);
 		loginPage.typePasswordInputBox(password);
 		loginPage.clickOnLoginButton();
 		//判断当前页面是否为true
@@ -54,7 +54,7 @@ public class CommonLogin {
  */
 	public static HomePage login() throws Exception {
 //		在本类调用本类方法，可以专注于接收参数
-		return CommonLogin.login("13282774643", "appium123");
+		return CommonLogin.login("18611360619", "mljicj00");
 	}
 /**
  * @author 700sfriend

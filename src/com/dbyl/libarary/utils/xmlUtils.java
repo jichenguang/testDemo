@@ -30,14 +30,16 @@ public class xmlUtils {
 	 * @author Young
 	 * @param path
 	 * @param pageName
-	 * @return
+	 * @return 一个Map集合：locatorMap：locatorName, temp
 	 * @throws Exception
 	 */
 	public static HashMap<String, Locator> readXMLDocument(String path,
 			String pageName) throws Exception {
-
+		
+		//日志输出
 		Log log = new Log(xmlUtils.class);
 		log.info(pageName);
+		
 		HashMap<String, Locator> locatorMap = new HashMap<String, Locator>();
 		locatorMap.clear();
 		File file = new File(path);
@@ -45,6 +47,7 @@ public class xmlUtils {
 			log.error("Can't find " + path);
 			throw new IOException("Can't find " + path);
 		}
+		
 		SAXReader reader = new SAXReader();
 		Document document = reader.read(file);
 		Element root = document.getRootElement();
@@ -68,6 +71,7 @@ public class xmlUtils {
 							timeOut = attribute.getValue();
 							log.info("get locator timeOut " + timeOut);
 						} else {
+//							在文件中获取元素。	
 							value = attribute.getValue();
 							log.info("get locator value " + value);
 						}
@@ -81,10 +85,8 @@ public class xmlUtils {
 				}
 				continue;
 			}
-
 		}
 		return locatorMap;
-
 	}
 
 	/**

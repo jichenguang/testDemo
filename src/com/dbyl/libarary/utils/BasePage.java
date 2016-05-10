@@ -53,6 +53,9 @@ public class BasePage {
 				+ "/src/com/dbyl/libarary/pageAction/"
 				+ this.getClass().getSimpleName() + ".xml";
 		log.info(path);
+		
+		
+		
 		/**
 		 * @author 700sfriend
 		 *  从外部文件获取元素的定位位置
@@ -63,10 +66,11 @@ public class BasePage {
 
 	/**
 	 * @author 700sfriend
-	 * 发送输入值
+	 * 一个action 方法，用于找到元素，并传输给元素一个值
 	 * @param locator
 	 * @param values
 	 * @throws Exception
+	 * 
 	 */
 	protected void type(Locator locator, String values) throws Exception {
 		WebElement e = findElement(driver, locator);
@@ -216,8 +220,8 @@ public class BasePage {
 	public WebElement getElement(WebDriver driver, Locator locator)
 			throws IOException {
 		
-//		--locator.getElement() 获取元素的名称，即locatorname
-//		--getLocator()  将返回一个新的locator对象，这个对象是从locatormap中获取，获取依赖locatorname
+//		locator.getElement() 获取元素的名称，即locatorname
+//		getLocator()  将返回一个新的locator对象，这个对象是从locatormap中获取，获取依赖locatorname
 		Locator newlocator;
 		newlocator= getLocator(locator.getElement());
 		log.debug("！元素名称是："+locator.getElement());
@@ -300,7 +304,7 @@ public class BasePage {
 
 	/**
 	 * @author 700sfriend
-	 * 返回一个对象WebElement对象
+	 * 返回一个对象,且是WebElement对象
 	 * @param 一个对象
 	 * @param driver
 	 * @param locator
@@ -351,9 +355,7 @@ public class BasePage {
 			locator = new Locator(locatorName);
 		}
 		return locator;
-
 	}
-
 /**
  * @author 700sfriend
  *  检查知乎首页是否已打开

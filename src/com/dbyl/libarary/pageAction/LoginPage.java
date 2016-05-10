@@ -42,12 +42,12 @@ public class LoginPage extends BasePage {
  * @param email
  * @throws Exception
  */
-	public void typeEmailInputBox(String email) throws Exception {
+	public void typeEmailInputBox(String name) throws Exception {
 		open("http://www.700store.com/login?");
 //		点击“登录”切换按钮，到登录页面
 		switchToLogin();
 //		输入值
-		type(loginEmailInputBox, email);
+		type(loginEmailInputBox, name);
 	}
 	/**
 	 * @author 700sfriend
