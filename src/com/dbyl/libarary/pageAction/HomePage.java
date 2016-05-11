@@ -9,13 +9,16 @@ import com.dbyl.libarary.utils.BasePage;
 import com.dbyl.libarary.utils.Locator;
 
 /**
+ * 描述了主页的操作业务
  * HomePage到底是个啥东西？
- * 1、是否是包含了页面的元素的一个类？
+ * ？是否是包含了页面的元素的一个类
+ * 具体的一个页面类，可以使用BasePage的方法。
+ * 被Action 类调用
  * @author 700sfriend
  *
  */
 public class HomePage extends BasePage {
-	private Locator profile=new Locator("//div[@class='top-nav-profile']");
+	private Locator profile=new Locator("html/body/div[1]/div/div/div[3]");
 	private Locator myMainPage= new Locator("myMainPage");
 	public HomePage(WebDriver driver) throws Exception {
 		super(driver);
@@ -51,8 +54,11 @@ public class HomePage extends BasePage {
 	 * @throws Exception
 	 */
 	public void clickOnMainPage() throws Exception
-	{
+	{	
+		System.out.println("悬浮在弹出层");
 		clickAndHoldProfile();
+		
+		System.out.println("￥￥￥￥￥打开我的主页");
 		click(myMainPage);
 		log.info("跳转到我的主页");
 	}

@@ -9,7 +9,9 @@ import com.dbyl.libarary.utils.BasePage;
 import com.dbyl.libarary.utils.Locator;
 
 /**
- * 一个对象类。
+ * 足管登陆的页面
+ * 具体的一个页面类，可以使用BasePage的方法。
+ * 被Action 类调用
  * @author 700sfriend
  *
  */
@@ -45,7 +47,7 @@ public class LoginPage extends BasePage {
 	public void typeEmailInputBox(String name) throws Exception {
 		open("http://www.700store.com/login?");
 //		点击“登录”切换按钮，到登录页面
-		switchToLogin();
+//		switchToLogin();
 //		输入值
 		/*
 		 * Param:locatorname:loginEmailInputBox

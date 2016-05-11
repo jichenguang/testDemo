@@ -2,7 +2,6 @@ package com.dbyl.libarary.utils;
 
 import java.io.IOException;
 import java.util.HashMap;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.ParseException;
@@ -26,7 +25,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * @author 700sfriend
  *  外部传入driver,本类直接调用
  * @author 700sfriend
- *
+ * @author 700sfriend 该类描述了对元素的操作方法、日志、元素定位文本xml；继承这个类，就可以直接使用这里的方法
  */
 public class BasePage {
 
@@ -145,6 +144,7 @@ public class BasePage {
 		WebElement e = findElement(driver, locator);
 		log.info("click button");
 //		e.click();
+//			在弹出层上单击
 		 ((JavascriptExecutor)driver).executeScript("arguments[0].click();",e);
 	}
 

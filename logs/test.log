@@ -1,40 +1,36 @@
-2016-05-10 14:07:05.335 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.TestNGListener: Test Start
-2016-05-10 14:07:05.396 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.tests.loginTest: Start WebDriver
-2016-05-10 14:07:05.397 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.TestNGListener: Test Finsh
-2016-05-10 14:07:05.407 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: com.dbyl.libarary.pageAction.LoginPage
-2016-05-10 14:07:05.408 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: /Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy of Demo
-2016-05-10 14:07:05.409 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: /Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy of Demo/src/com/dbyl/libarary/pageAction/LoginPage.xml
-2016-05-10 14:07:05.410 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: com.dbyl.libarary.pageAction.LoginPage
-2016-05-10 14:07:05.495 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: page Info is:com.dbyl.libarary.pageAction.LoginPage
-2016-05-10 14:07:05.496 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type 
-2016-05-10 14:07:05.497 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 3
-2016-05-10 14:07:05.497 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value //input[@name='account' and  not(@autocomplete)]
-2016-05-10 14:07:05.498 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is loginEmailInputBox
-2016-05-10 14:07:05.498 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
-2016-05-10 14:07:05.499 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 3
-2016-05-10 14:07:05.499 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value //button[@class='sign-button submit' and text()='登录']
-2016-05-10 14:07:05.499 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is loginButton
-2016-05-10 14:07:05.499 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
-2016-05-10 14:07:05.500 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 3
-2016-05-10 14:07:05.500 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value //div[@class='top-nav-profile']//img[@class='Avatar']
-2016-05-10 14:07:05.501 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is profile
-2016-05-10 14:07:05.501 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
-2016-05-10 14:07:05.501 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 3
-2016-05-10 14:07:05.501 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value //input[@name='password' and @placeholder='密码']
-2016-05-10 14:07:05.502 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is loginPasswordInputBox
-2016-05-10 14:07:05.502 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
-2016-05-10 14:07:05.502 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 30
-2016-05-10 14:07:05.503 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value html/body/div[1]/div/div[2]/div[1]/div/a[2]
-2016-05-10 14:07:05.503 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is clickToLoginButton
-2016-05-10 14:07:05.503 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
-2016-05-10 14:07:05.504 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 30
-2016-05-10 14:07:05.504 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value .//*[@id=':1']
-2016-05-10 14:07:05.505 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is myMainPage
-2016-05-10 14:07:07.347 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: executing request http://www.700store.com/login?
-2016-05-10 14:07:07.494 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: --------------------------------------
-2016-05-10 14:07:07.494 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: HTTP/1.1 200 OK
-2016-05-10 14:07:07.494 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: Response content length: -1
-2016-05-10 14:07:07.499 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: Response content: 
+2016-05-11 17:31:52.221 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.TestNGListener: Test Start
+2016-05-11 17:31:52.288 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.tests.loginTest: Start WebDriver
+2016-05-11 17:31:52.289 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.TestNGListener: Test Finsh
+2016-05-11 17:31:52.298 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: com.dbyl.libarary.pageAction.LoginPage
+2016-05-11 17:31:52.298 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: /Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy of Demo
+2016-05-11 17:31:52.298 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: /Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy of Demo/src/com/dbyl/libarary/pageAction/LoginPage.xml
+2016-05-11 17:31:52.300 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: com.dbyl.libarary.pageAction.LoginPage
+2016-05-11 17:31:52.379 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: page Info is:com.dbyl.libarary.pageAction.LoginPage
+2016-05-11 17:31:52.380 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type 
+2016-05-11 17:31:52.380 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 3
+2016-05-11 17:31:52.381 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value .//*[@id='txtEmail']
+2016-05-11 17:31:52.383 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is loginEmailInputBox
+2016-05-11 17:31:52.384 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
+2016-05-11 17:31:52.384 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 3
+2016-05-11 17:31:52.384 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value .//*[@id='txtPassword']
+2016-05-11 17:31:52.385 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is loginPasswordInputBox
+2016-05-11 17:31:52.385 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
+2016-05-11 17:31:52.385 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 3
+2016-05-11 17:31:52.385 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value .//*[@id='btnLogin']
+2016-05-11 17:31:52.386 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is loginButton
+2016-05-11 17:31:52.386 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
+2016-05-11 17:31:52.386 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 3
+2016-05-11 17:31:52.386 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value html/body/div[1]/div/div[3]
+2016-05-11 17:31:52.387 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is profile
+2016-05-11 17:31:52.387 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
+2016-05-11 17:31:52.387 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 30
+2016-05-11 17:31:52.387 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value html/body/div[1]/div/div/ul/li[1]/a
+2016-05-11 17:31:52.387 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is myMainPage
+2016-05-11 17:31:53.585 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: executing request http://www.700store.com/login?
+2016-05-11 17:31:53.818 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: --------------------------------------
+2016-05-11 17:31:53.819 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: HTTP/1.1 200 OK
+2016-05-11 17:31:53.819 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: Response content length: -1
+2016-05-11 17:31:53.824 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: Response content: 
 
 <!DOCTYPE html>
 <html>
@@ -62,10 +58,10 @@
 
     <div class="login_wap">
         <form method="post" action="./login" id="form1">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="QhcygSc1FXBQdjGsD+AhPFLs6io+/98vMCzKiPNZKyNctW+aEOLHMLYMfnjTNXX2usS1+25B0BH058734ilpES2MwWE=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="7ZvUE4iN7dNIg5TTaHYA9jaU/PcRTMD0j3Yo4Qjnl/SCm7sv+iI6K/2juSyb5uVL/npVDZkGGc1u/bFL7qMHqJzEoWQ=" />
 
 <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B2E21AB2" />
-<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="75rpPUBUqBk/TIxg0JCAifr+5tXJ7pOanbq63BC3VIGCdwzxJzMv+OhTNtS1iWv+vBtfeIs9zlDvG/QnjcawxHY4KMj6hPL+t15djU9Dmr+cXv/qtDOdZi9l9pXPIn1OsdyuyHLGJdqzAhgldEBvQ8Ds/PU=" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="fA/B8nC2leGNJjMVZgmL4TIXZqdgshZycGkR/MX08VSScyeC+3TlI58bCiYYjcyRRCUgEC4x61QsACSoI3dUriQ1XUgfrsOpnRyJ/2D1FhqXF0QP8mg30GPEU7NPZSBU6V9Bv482DlpTXn+ZZeicib15mN8=" />
             <div class="input"><input name="txtEmail" maxlength="11" id="txtEmail" type="text" placeholder="手机号码" /></div>
             <div class="input"><input name="txtPassword" autocomplete="off" maxlength="20" id="txtPassword" type="password" placeholder="密码" /></div>
             
@@ -156,32 +152,44 @@
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1255775147'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D1255775147' type='text/javascript'%3E%3C/script%3E"));</script></div>
   </body>
 </html>
-2016-05-10 14:07:07.499 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: ------------------------------------
-2016-05-10 14:07:07.507 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：clickToLoginButton
-2016-05-10 14:07:07.507 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：html/body/div[1]/div/div[2]/div[1]/div/a[2]
-2016-05-10 14:07:07.508 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
-2016-05-10 14:07:08.036 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：clickToLoginButton
-2016-05-10 14:07:08.037 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：html/body/div[1]/div/div[2]/div[1]/div/a[2]
-2016-05-10 14:07:08.038 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
-2016-05-10 14:07:08.565 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：clickToLoginButton
-2016-05-10 14:07:08.566 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：html/body/div[1]/div/div[2]/div[1]/div/a[2]
-2016-05-10 14:07:08.566 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
-2016-05-10 14:07:09.097 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：clickToLoginButton
-2016-05-10 14:07:09.098 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：html/body/div[1]/div/div[2]/div[1]/div/a[2]
-2016-05-10 14:07:09.098 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
-2016-05-10 14:07:09.625 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：clickToLoginButton
-2016-05-10 14:07:09.626 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：html/body/div[1]/div/div[2]/div[1]/div/a[2]
-2016-05-10 14:07:09.626 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
-2016-05-10 14:07:10.153 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：clickToLoginButton
-2016-05-10 14:07:10.154 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：html/body/div[1]/div/div[2]/div[1]/div/a[2]
-2016-05-10 14:07:10.154 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
-2016-05-10 14:07:10.670 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：clickToLoginButton
-2016-05-10 14:07:10.671 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：html/body/div[1]/div/div[2]/div[1]/div/a[2]
-2016-05-10 14:07:10.671 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
-2016-05-10 14:07:10.696 ERROR com.dbyl.libarary.utils.Log 41 error - com.dbyl.libarary.utils.TestNGListener: Test Failure
-2016-05-10 14:07:10.710 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.tests.loginTest: /Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy of Demo
-2016-05-10 14:07:12.522 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.tests.loginTest: save snapshot path is:/Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy of DemologinTest_2016_05_10_14_07_10.png
-2016-05-10 14:07:12.558 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.tests.loginTest: screen shot finished
-2016-05-10 14:07:12.584 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.tests.loginTest: Stop WebDriver
-2016-05-10 14:07:12.831 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.TestNGListener: Test Finish
-2016-05-10 14:07:12.831 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.TestNGListener: failedTest = loginByUserName
+2016-05-11 17:31:53.825 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: ------------------------------------
+2016-05-11 17:31:53.839 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：loginEmailInputBox
+2016-05-11 17:31:53.840 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：.//*[@id='txtEmail']
+2016-05-11 17:31:53.840 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
+2016-05-11 17:31:53.918 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: type value is:  18611360619
+2016-05-11 17:31:54.025 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：loginPasswordInputBox
+2016-05-11 17:31:54.025 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：.//*[@id='txtPassword']
+2016-05-11 17:31:54.025 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
+2016-05-11 17:31:54.041 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: type value is:  mljicj00
+2016-05-11 17:31:54.119 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：loginButton
+2016-05-11 17:31:54.119 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：.//*[@id='btnLogin']
+2016-05-11 17:31:54.120 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
+2016-05-11 17:31:54.130 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.LoginPage: click button
+2016-05-11 17:31:54.191 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ！元素名称是：html/body/div[1]/div/div[3]
+2016-05-11 17:31:54.191 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: ! 元素的路径是：html/body/div[1]/div/div[3]
+2016-05-11 17:31:54.192 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.LoginPage: find element By xpath
+2016-05-11 17:31:54.883 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.HomePage: com.dbyl.libarary.pageAction.HomePage
+2016-05-11 17:31:54.883 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.HomePage: /Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy of Demo
+2016-05-11 17:31:54.883 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.HomePage: /Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy of Demo/src/com/dbyl/libarary/pageAction/HomePage.xml
+2016-05-11 17:31:54.884 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: com.dbyl.libarary.pageAction.HomePage
+2016-05-11 17:31:54.886 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: page Info is:com.dbyl.libarary.pageAction.HomePage
+2016-05-11 17:31:54.887 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
+2016-05-11 17:31:54.887 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 3
+2016-05-11 17:31:54.887 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value html/body/div[1]/div/div[3]
+2016-05-11 17:31:54.887 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is profile
+2016-05-11 17:31:54.888 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator type ByXpath
+2016-05-11 17:31:54.888 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator timeOut 3
+2016-05-11 17:31:54.888 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: get locator value html/body/div[1]/div/ul/li[1]/a
+2016-05-11 17:31:54.889 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.xmlUtils: locator Name is myMainPage
+2016-05-11 17:31:54.889 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.HomePage: ！元素名称是：html/body/div[1]/div/div/div[3]
+2016-05-11 17:31:54.889 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.HomePage: ! 元素的路径是：html/body/div[1]/div/div/div[3]
+2016-05-11 17:31:54.889 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.HomePage: find element By xpath
+2016-05-11 17:31:54.946 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.HomePage: ！元素名称是：myMainPage
+2016-05-11 17:31:54.946 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.HomePage: ! 元素的路径是：html/body/div[1]/div/ul/li[1]/a
+2016-05-11 17:31:54.947 DEBUG com.dbyl.libarary.utils.Log 33 debug - com.dbyl.libarary.pageAction.HomePage: find element By xpath
+2016-05-11 17:31:54.961 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.HomePage: click button
+2016-05-11 17:31:55.015 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.pageAction.HomePage: 跳转到我的主页
+2016-05-11 17:31:55.016 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.TestNGListener: Test Success
+2016-05-11 17:31:55.019 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.tests.loginTest: Stop WebDriver
+2016-05-11 17:31:55.449 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.TestNGListener: Test Finish
+2016-05-11 17:31:55.450 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.TestNGListener: PassedTests = loginByUserName

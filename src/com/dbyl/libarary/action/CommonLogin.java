@@ -10,6 +10,8 @@ import com.dbyl.libarary.utils.PageFactory;
 
 /**
  * 这是个什么类？
+ * 在测试步骤中，对具体业务操作的描述。
+ * 这里的业务操作使用了页面类和元素类运行。
  * @author 700sfriend
  *
  */
@@ -42,6 +44,7 @@ public class CommonLogin {
 		loginPage.typePasswordInputBox(password);
 		loginPage.clickOnLoginButton();
 		//判断当前页面是否为true
+		//如何判断登陆成功？Yong用了一个元素是否出现做判断。1、成功：能看到用户头像；2、失败：看不到头像
 		Assert.assertTrue(loginPage.isPrestentProfile(), "login failed");
 		return (HomePage) PageFactory.getPage(HomePage.class, getDriver());
 	}
