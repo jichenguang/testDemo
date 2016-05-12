@@ -1,5 +1,6 @@
 package com.dbyl.tests;
 
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -8,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.dbyl.libarary.action.GetSessionByJi;
 import com.dbyl.libarary.action.ViewHomePage;
 import com.dbyl.libarary.utils.DriverFactory;
 import com.dbyl.libarary.utils.TestNGListener;
@@ -33,7 +35,14 @@ public class loginTest extends UITest {
 	@Test(groups = "loginTest")
 	public void loginByUserName() throws Exception {
 		ViewHomePage.viewMyProfile();
+		
+		
+		Cookie Session = GetSessionByJi.getCookie(driver);
+		driver.manage().addCookie(Session);
+	
 	}
+	
+
 
 	@AfterMethod(alwaysRun = true)
 	public void stop() {

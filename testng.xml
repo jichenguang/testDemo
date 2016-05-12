@@ -5,6 +5,7 @@
 		<parameter name="driverName" value="chrome" />
 		<classes>
 			<class name="com.dbyl.tests.loginTest" />
+					
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
