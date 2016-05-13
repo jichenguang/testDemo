@@ -34,12 +34,7 @@ public class loginTest extends UITest {
 
 	@Test(groups = "loginTest")
 	public void loginByUserName() throws Exception {
-		ViewHomePage.viewMyProfile();
-		
-		
-		Cookie Session = GetSessionByJi.getCookie(driver);
-		driver.manage().addCookie(Session);
-	
+		ViewHomePage.viewMyProfile();	
 	}
 	
 
