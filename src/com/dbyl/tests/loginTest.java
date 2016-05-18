@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 
 import com.dbyl.libarary.action.GetSessionByJi;
 import com.dbyl.libarary.action.ViewHomePage;
+import com.dbyl.libarary.action.actionDriverCookie;
+import com.dbyl.libarary.action.actionGetCookie;
 import com.dbyl.libarary.utils.DriverFactory;
 import com.dbyl.libarary.utils.TestNGListener;
 import com.dbyl.libarary.utils.UITest;
@@ -24,7 +26,7 @@ public class loginTest extends UITest {
 //	注释掉，使用默认浏览器。
 //	WebDriver driver = DriverFactory.getChromeDriver();
 	WebDriver driver = new FirefoxDriver();
-//	WebDriver driver = new ChromeDriver();
+
 
 	@BeforeMethod(alwaysRun = true)
 	public void init() {		
@@ -34,7 +36,12 @@ public class loginTest extends UITest {
 
 	@Test(groups = "loginTest")
 	public void loginByUserName() throws Exception {
+//		登陆
 		ViewHomePage.viewMyProfile();	
+//		登陆后，获取Cookie.
+		actionDriverCookie.addCookie(driver);
+//		然后执行业务操作
+		MailTest.ssSendMail();
 	}
 	
 

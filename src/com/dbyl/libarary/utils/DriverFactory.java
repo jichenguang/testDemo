@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.Properties;
 
+import org.apache.poi.util.SystemOutLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -40,8 +41,12 @@ public class DriverFactory {
 	private static String config = System.getProperty("user.dir")
 			+ "/config.properties";
 	
-	static Log log = new Log(DriverFactory.class);
+//	private static String config ="/Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/AntTest/config.properties";
+	
+	
 
+	static Log log = new Log(DriverFactory.class);
+	
 	public static WebDriver getHtmlUnit() {
 		HtmlUnitDriver driver = new HtmlUnitDriver();
 		log.info("Create HtmlUnitDrive ");
@@ -58,6 +63,7 @@ public class DriverFactory {
 	public static WebDriver getChromeDriver() {
 
 		try {
+
 			p = ConfigUtils.getProperties(config);
 		} catch (IOException e) {
 			log.error(e.getMessage());

@@ -17,6 +17,7 @@ public class ConfigUtils {
 	public static Properties getProperties(String config) throws IOException {
 //		获取文本参数
 		Properties properties = new Properties();
+		log.info("启动文本路径是："+config);
 		log.info("Get the config file: " + config);
 		FileInputStream inStream = new FileInputStream(new File(config));
 		try {

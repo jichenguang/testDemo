@@ -37,12 +37,7 @@ public class ViewHomePage {
 		
 //		正常的登录
 		homePage = CommonLogin.login();
-		
-//		登陆后，获取Cookie.
-		Cookie homePageCookie =  GetSessionByJi.getCookie(driver);
-		driver.manage().addCookie(homePageCookie);
-		
-		
+				
 //		登录后切换到“我的主页”
 		System.out.println("！！跳转到我的主页");
 		homePage.clickOnMainPage();

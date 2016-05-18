@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="12.291">
+           time="9.333">
   <properties />
   
   
-            <testcase name="loginByUserName" time="12.291" classname="com.dbyl.tests.loginTest" />
+            <testcase name="loginByUserName" time="9.333" classname="com.dbyl.tests.loginTest" />
       
 </testsuite>

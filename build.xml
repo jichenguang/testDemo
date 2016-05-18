@@ -12,6 +12,7 @@
 			<include name="lib/testng.jar" />
 			<include name="lib/sikuli-script.jar" />
 			<include name="lib/*.jar" />
+			<include name="lib/email/*.jar"/>
 		</fileset>
 		<fileset dir="${basedir}/lib/selenium">
 			<include name="*.jar" />

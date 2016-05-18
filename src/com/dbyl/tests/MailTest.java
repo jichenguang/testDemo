@@ -43,8 +43,16 @@ public class MailTest {
 	}
 
 	public static void main(String[] args) throws Exception {
+		System.out.println("发邮件！");
 		sendMail("13282774643@163.com", "13282774643", "1qaz2wsx3edc",
 				"dbyl@dbyl.cn", "zhihu master", "Test email");
+
+	}
+	public static void ssSendMail() throws Exception{
+		System.out.println("发邮件！");
+		MailTest.sendMail("13282774643@163.com", "13282774643", "1qaz2wsx3edc",
+				"dbyl@dbyl.cn", "zhihu master", "Test email");
+	
 	}
 
 }
