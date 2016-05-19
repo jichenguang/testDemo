@@ -38,10 +38,10 @@ public class DriverFactory {
 	
 //	浏览器的路径都写在文本中，由config获取。
 //	MAC环境中需要把\\转换成/
-	private static String config = System.getProperty("user.dir")
-			+ "/config.properties";
+	public static String config = System.getProperty("user.dir")
+			+ "com/dbyl/tests/config.properties";
 	
-//	private static String config ="/Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/AntTest/config.properties";
+//     static String config ="/Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy of Demo/config.properties";
 	
 	
 

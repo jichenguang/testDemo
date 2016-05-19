@@ -9,7 +9,7 @@
 		<fileset dir="${basedir}">
 			<include name="lib/poi/*.jar" />
 			<include name="lib/poi/lib/*.jar" />
-			<include name="lib/testng.jar" />
+			<include name="lib/testng-6.9.9.jar" />
 			<include name="lib/sikuli-script.jar" />
 			<include name="lib/*.jar" />
 			<include name="lib/email/*.jar"/>
@@ -26,7 +26,7 @@
 	<target name="compile" depends="clean">
 		<echo message="mkdir"/>
 		<mkdir dir="build/classes"/>
-		<javac srcdir="src" destdir="build/classes" debug="on" encoding="UTF-8">
+		<javac srcdir="src" destdir="build/classes" includeAntRuntime="false" debug="on" encoding="UTF-8">
 			<classpath refid="run.classpath"/>
 		</javac>
 	</target>

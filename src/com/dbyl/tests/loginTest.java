@@ -1,5 +1,6 @@
 package com.dbyl.tests;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,8 +25,8 @@ import com.dbyl.libarary.utils.UITest;
 public class loginTest extends UITest {
 
 //	注释掉，使用默认浏览器。
-//	WebDriver driver = DriverFactory.getChromeDriver();
-	WebDriver driver = new FirefoxDriver();
+	WebDriver driver = DriverFactory.getChromeDriver();
+//	WebDriver driver = new FirefoxDriver();
 
 
 	@BeforeMethod(alwaysRun = true)

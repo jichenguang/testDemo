@@ -1,2 +1,2 @@
-2016-05-18 11:31:50.429 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.ConfigUtils: Get the config file: C:\Users\Young\workspace\Demo\config.properties
-2016-05-18 11:31:50.433 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.DriverFactory: null
+2016-05-18 17:30:48.805 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.ConfigUtils: Get the config file: C:\Users\Young\workspace\Demo\config.properties
+2016-05-18 17:30:48.810 INFO  com.dbyl.libarary.utils.Log 25 info - com.dbyl.libarary.utils.DriverFactory: null
