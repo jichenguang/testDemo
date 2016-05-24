@@ -19,6 +19,7 @@ public class LoginPage extends BasePage {
 
 	WebDriver driver;
 
+	@Override
 	public WebDriver getDriver() {
 		return driver;
 	}
@@ -79,7 +80,7 @@ public class LoginPage extends BasePage {
 
 	public void waitForPageLoad() {
 		super.getDriver().manage().timeouts()
-				.pageLoadTimeout(30, TimeUnit.SECONDS);
+				.pageLoadTimeout(2, TimeUnit.SECONDS);
 	}
 
 	/**

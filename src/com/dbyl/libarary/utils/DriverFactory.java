@@ -7,7 +7,6 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.Properties;
 
-import org.apache.poi.util.SystemOutLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -38,10 +37,9 @@ public class DriverFactory {
 	
 //	浏览器的路径都写在文本中，由config获取。
 //	MAC环境中需要把\\转换成/
-	public static String config = System.getProperty("user.dir")
-			+ "com/dbyl/tests/config.properties";
+	public static String config = System.getProperty("user.dir")+"/config.properties";
 	
-//     static String config ="/Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy of Demo/config.properties";
+//     static String config ="/Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/Copy\\ of\\ Demo/config.properties";
 	
 	
 
@@ -63,8 +61,8 @@ public class DriverFactory {
 	public static WebDriver getChromeDriver() {
 
 		try {
+			p = ConfigUtilsJi.getProperties(config);
 
-			p = ConfigUtils.getProperties(config);
 		} catch (IOException e) {
 			log.error(e.getMessage());
 		}
@@ -105,7 +103,7 @@ public class DriverFactory {
 	public static WebDriver getFirefoxDriver() {
 		try {
 			WindowsUtils.tryToKillByName("firefox.exe");
-			p = ConfigUtils.getProperties(config);
+			p = ConfigUtilsJi.getProperties(config);
 
 		} catch (Exception e) {
 			log.error("can not find firefox process");
@@ -156,7 +154,7 @@ public class DriverFactory {
 
 	public static WebDriver getIEDriver() {
 		try {
-			p = ConfigUtils.getProperties(config);
+			p = ConfigUtilsJi.getProperties(config);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -210,7 +208,7 @@ public class DriverFactory {
 
 	public static WebDriver getEDGEDriver() {
 		try {
-			p = ConfigUtils.getProperties(config);
+			p = ConfigUtilsJi.getProperties(config);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

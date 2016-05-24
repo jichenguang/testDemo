@@ -1,15 +1,13 @@
-<?xml version="1.0"?>
-<project name="Demo" default="run" basedir=".">
-	<property name="bin" value="bin"/>
-	<property name="src" value="src" />
-	<property name="classes" value="bin/classes" />
-	<echo  message="Start selenium Grid" />
-	<echo  message="import libs" />
-	<path id="run.classpath">
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="testDemo" default="run" basedir="." >
+<!-- 默认target是run,运行ant命令直接执行run -->
+    <echo message="The base dir is: ${basedir}" />
+    
+    <path id="run.classpath">
 		<fileset dir="${basedir}">
 			<include name="lib/poi/*.jar" />
 			<include name="lib/poi/lib/*.jar" />
-			<include name="lib/testng-6.9.9.jar" />
+			<include name="lib/testng-6.9.10.jar" />
 			<include name="lib/sikuli-script.jar" />
 			<include name="lib/*.jar" />
 			<include name="lib/email/*.jar"/>
@@ -19,23 +17,30 @@
 			<include name="libs/*.jar" />
 		</fileset>
 	</path>
-	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="run.classpath" />
-	<target name="clean">
-		<delete dir="build"/>
-	</target>
-	<target name="compile" depends="clean">
-		<echo message="mkdir"/>
-		<mkdir dir="build/classes"/>
-		<javac srcdir="src" destdir="build/classes" includeAntRuntime="false" debug="on" encoding="UTF-8">
+	
+    <taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="run.classpath" />
+    
+    
+    <target name="clean">
+       <delete dir="build"/>
+    </target>
+    <target name="compile" depends="clean">
+    <!-- 编译java文件依赖clean -->
+       <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes" includeAntRuntime="false" debug="on" encoding="UTF-8">
 			<classpath refid="run.classpath"/>
 		</javac>
-	</target>
-	<path id="runpath"> 
+    </target>
+    <path id="runpath"> 
 		 <path refid="run.classpath"/> 
 		 <pathelement location="build/classes"/> 
 	   </path> 
-	<target name="run" depends="compile">
-		<testng  classpathref="runpath"  outputDir="test-output" 
+	   
+    
+    <target name="run" depends="compile">
+    <!-- 运行class文件,依赖compile -->
+     <echo message="Compile dir is:  ${basedir}/build/classes" />
+     	<testng  classpathref="runpath"  outputDir="test-output" 
 			haltonfailure="true"
 			useDefaultListeners="false"   
 			listeners="org.uncommons.reportng.HTMLReporter,org.testng.reporters.FailedReporter" >  
@@ -43,21 +48,5 @@
 			<jvmarg value="-Dfile.encoding=UTF-8" />
 			<sysproperty key="org.uncommons.reportng.title" value="AutoMation TestReport" /> 
 		</testng>
-		</target>
-		<target name="runTestng" depends="compile">
-		<testng  classpathref="runpath"  outputDir="test-output" 
-			haltonfailure="true"
-			useDefaultListeners="false"   
-			listeners="org.uncommons.reportng.HTMLReporter,org.testng.reporters.FailedReporter" >  
-			<xmlfileset dir="${basedir}" includes="Parametertestng.xml"/>
-			<jvmarg value="-Dfile.encoding=UTF-8" />
-			<sysproperty key="org.uncommons.reportng.title" value="AutoMation TestReport" /> 
-		</testng>
-	</target>
-	
-	<target name="jar" depends="compile">
-		<jar basedir="${bin}" destfile="${jar-file-name}">
-			<zipfileset excludes="META-INF/*.SF"  />
-		</jar>
-	</target>
+    </target>
 </project>

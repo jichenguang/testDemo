@@ -11,7 +11,7 @@ public class Log {
 	 * 
 	 * @param clazz
 	 */
-	Log(Class<?> clazz) {
+	public Log(Class<?> clazz) {
 		this.clazz = clazz;
 		this.logger = LogManager.getLogger(this.clazz);
 	}

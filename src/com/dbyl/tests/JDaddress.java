@@ -14,7 +14,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import com.dbyl.libarary.utils.DriverFactory;
-import com.dbyl.libarary.utils.RemoteBrowserBean;
 
 public class JDaddress {
 	private WebDriver driver;

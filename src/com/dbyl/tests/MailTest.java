@@ -50,7 +50,7 @@ public class MailTest {
 	}
 	public static void ssSendMail() throws Exception{
 		System.out.println("发邮件！");
-		MailTest.sendMail("13282774643@163.com", "13282774643", "1qaz2wsx3edc",
+		MailTest.sendMail("jichenguang@700bike.com", "jichenguang", "mljicj00",
 				"dbyl@dbyl.cn", "zhihu master", "Test email");
 	
 	}

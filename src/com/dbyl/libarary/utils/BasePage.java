@@ -2,7 +2,6 @@ package com.dbyl.libarary.utils;
 
 import java.io.IOException;
 import java.util.HashMap;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
@@ -43,7 +42,7 @@ public class BasePage {
 	 * @param driver
 	 * @throws Exception
 	 */
-	protected BasePage(WebDriver driver) throws Exception {
+	public BasePage(WebDriver driver) throws Exception {
 		this.driver = driver;
 		log.debug(this.getClass().getCanonicalName());
 		log.info(System.getProperty("user.dir"));
@@ -51,6 +50,7 @@ public class BasePage {
 		path = System.getProperty("user.dir")
 				+ "/src/com/dbyl/libarary/pageAction/"
 				+ this.getClass().getSimpleName() + ".xml";
+//		path ="/Users/700sfriend/Desktop/work/MyDEV/workspace-sts-3.7.1.RELEASE/testDemo/src/com/dbyl/libarary/pageAction/LoginPage.xml";
 		log.info(path);
 		
 		

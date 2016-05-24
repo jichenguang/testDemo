@@ -2,7 +2,6 @@ package com.dbyl.libarary.pageAction;
 
 import java.io.IOException;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import com.dbyl.libarary.utils.BasePage;

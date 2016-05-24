@@ -15,7 +15,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.dbyl.libarary.action.Cookies;
-import com.dbyl.libarary.utils.DriverFactory;
 
 public class UseCookieLogin {
 

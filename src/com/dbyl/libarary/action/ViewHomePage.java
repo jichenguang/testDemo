@@ -3,7 +3,6 @@
  */
 package com.dbyl.libarary.action;
 
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 
 import com.dbyl.libarary.pageAction.HomePage;

@@ -1,32 +1,26 @@
 package com.dbyl.tests;
 
+
 import org.testng.annotations.Test;
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-
-import com.dbyl.libarary.action.GetSessionByJi;
 import com.dbyl.libarary.action.ViewHomePage;
 import com.dbyl.libarary.action.actionDriverCookie;
-import com.dbyl.libarary.action.actionGetCookie;
-import com.dbyl.libarary.utils.DriverFactory;
+import com.dbyl.libarary.pageAction.OrderPage;
+import com.dbyl.libarary.pageAction.cartPage;
 import com.dbyl.libarary.utils.TestNGListener;
 import com.dbyl.libarary.utils.UITest;
-
-
-
+import com.dbyl.tests.MailTest;
 
 @Listeners({ TestNGListener.class })
 public class loginTest extends UITest {
 
 //	注释掉，使用默认浏览器。
-	WebDriver driver = DriverFactory.getChromeDriver();
-//	WebDriver driver = new FirefoxDriver();
+//	WebDriver driver = DriverFactory.getChromeDriver();
+	WebDriver driver = new FirefoxDriver();
 
 
 	@BeforeMethod(alwaysRun = true)
@@ -43,10 +37,18 @@ public class loginTest extends UITest {
 		actionDriverCookie.addCookie(driver);
 //		然后执行业务操作
 		MailTest.ssSendMail();
+//		加入购物车
+		cartPage.ActionCart(driver);
+//		提交订单
+		OrderPage.subToOrder(driver);
+//		订单中心：取消订单
+//		OrderByPage.cancleOrder(driver);
+		
 	}
 	
 
 
+	@Override
 	@AfterMethod(alwaysRun = true)
 	public void stop() {
 		super.stop();
